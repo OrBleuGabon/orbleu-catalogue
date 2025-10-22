@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Or bleu Gabon — Voir le catalogue</title>
+
+  <!-- Meta -->
+  <meta name="description" content="Découvrez le catalogue Or bleu Gabon sur WhatsApp." />
+  <meta property="og:title" content="Or bleu Gabon — Catalogue WhatsApp" />
+  <meta property="og:description" content="Cliquez pour ouvrir notre catalogue WhatsApp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logo.png" />
+  <meta property="og:image:alt" content="Logo Or bleu Gabon" />
+
+  <!-- Auto redirect towards WhatsApp (2s) -->
+  <meta http-equiv="refresh" content="2;url=https://wa.me/c/24104456922?text=Bonjour%2C%20je%20viens%20de%20Facebook%20et%20je%20veux%20voir%20le%20catalogue" />
+
+  <style>
+    :root{--gold:#D4AF37;--blue:#123A64;}
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;background:radial-gradient(1200px circle at 50% 10%,rgba(212,175,55,0.08),transparent 60%) #0f2742;color:#f7f7f7}
+    .wrap{min-height:100vh;display:grid;place-items:center;padding:24px}
+    .card{background:#0e243c;border:1px solid rgba(255,255,255,.08);border-radius:16px;max-width:680px;width:100%;padding:28px;box-shadow:0 10px 40px rgba(0,0,0,.25)}
+    .top{display:flex;align-items:center;gap:16px;margin-bottom:12px}
+    .top img{width:56px;height:56px;object-fit:contain;border-radius:50%;background:#0b1b2d;border:1px solid rgba(255,255,255,.08)}
+    h1{margin:0;font-size:1.4rem;letter-spacing:.3px}
+    p{opacity:.88;line-height:1.5}
+    .cta{display:inline-block;margin-top:10px;padding:12px 18px;border-radius:10px;background:var(--gold);color:#0a2040;text-decoration:none;font-weight:600}
+    .hint{font-size:.9rem;opacity:.8;margin-top:8px}
+    footer{opacity:.7;font-size:.85rem;margin-top:18px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="top">
+        <img src="logo.png" alt="Or bleu Gabon Logo" />
+        <div>
+          <h1>Or bleu Gabon</h1>
+          <p>Vous allez être redirigé·e vers notre <strong>catalogue WhatsApp</strong>.</p>
+        </div>
+      </div>
+      <a class="cta" id="openBtn" href="https://wa.me/c/24104456922?text=Bonjour%2C%20je%20viens%20de%20Facebook%20et%20je%20veux%20voir%20le%20catalogue" target="_blank" rel="noopener">Ouvrir le catalogue WhatsApp</a>
+      <div class="hint">La redirection automatique a lieu sous 2 secondes. Si rien ne se passe, cliquez sur le bouton.</div>
+      <footer>© Or bleu Gabon</footer>
+    </div>
+  </div>
+
+  <script>
+    // Fallback JS open in a new tab after 2s (in case meta refresh is blocked)
+    setTimeout(function(){
+      try{ window.open(document.getElementById('openBtn').href, '_blank'); }catch(e){}
+    }, 2000);
+  </script>
+</body>
+</html>
